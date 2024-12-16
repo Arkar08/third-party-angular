@@ -3,10 +3,9 @@ ul{
     margin: 0px !important;
 }
 .active{
-    background-color: #ec9bf4;
-    box-shadow: 3px 3px 5px white;
+    background-color: #0096877e;
+    box-shadow: 1px 1px 3px white;
     transition: all 1s ease-in-out;
-    color: black;
 }
 a{
     display: flex;

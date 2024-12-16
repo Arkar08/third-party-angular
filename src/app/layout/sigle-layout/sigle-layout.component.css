@@ -4,14 +4,14 @@ mat-drawer-container{
 }
 mat-drawer{
     width: 16%;
-    background-color: #BA68C8;
+    background-color: rgba(0, 0, 0, 0.7);
 }
 mat-drawer-content{
     padding: 10px 20px !important;
 }
 mat-toolbar{
     height: 70px !important;
-    background-color: #AB47BC;
+    background-color:  #009687e2;
 }
 span{
     font-size: 20px !important;
