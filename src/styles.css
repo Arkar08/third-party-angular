@@ -1,1 +1,55 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+.flex{
+    display: flex !important;
+}
+.justify-between{
+    justify-content: space-between !important;
+}
+.items-center{
+    align-items: center !important;
+}
+.icon-image{
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    object-position: center;
+}
+.ptb{
+    padding: 0rem 2rem !important;
+}
+.shadow{
+    box-shadow: 3px 5px 5px #CE93D8;
+    border-radius: 50%;
+}
+.prl-1{
+    padding: 0px 10px !important;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.row{
+    flex-direction: row !important;
+}
+.flex-end{
+    justify-content: flex-end;
+}
+.ml-2{
+    margin-left: 20px !important;
+}
+.flex-2{
+    flex: 2;
+}
+.flex-1{
+    flex: 1;
+}
+.mrl-1{
+    margin:0px 20px !important
+}

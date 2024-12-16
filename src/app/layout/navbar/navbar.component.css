@@ -1,0 +1,12 @@
+mat-toolbar{
+    height: 70px !important;
+    background-color: #AB47BC;
+}
+span{
+    font-size: 20px !important;
+    color: #ffffff;
+    font-weight: 500;
+}
+.menu{
+    color: #ffffff !important;
+}
