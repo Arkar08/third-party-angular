@@ -1,0 +1,38 @@
+<div>
+  <h3>What is your favourite fruit? Give Me Please.</h3>
+  <mat-grid-list cols="3" rowHeight="2:1" [gutterSize]="'10px'">
+    <mat-grid-tile>
+      <mat-form-field>
+        <mat-label>Your Name</mat-label>
+        <input type="text" matInput placeholder="Name" />
+      </mat-form-field>
+    </mat-grid-tile>
+    <mat-grid-tile>
+        <mat-form-field>
+            <mat-label>Favorite food</mat-label>
+            <mat-select>
+                @for (fruit of fruits; track fruit) {
+                    <mat-option [value]="fruit">{{fruit}}</mat-option>
+                  }
+            </mat-select>
+          </mat-form-field>
+    </mat-grid-tile>
+    <mat-grid-tile>
+        <section class="example-section">
+          <label class="example-margin">Progress:({{ progressValue }}%)</label>
+          <mat-slider class="example-margin">
+            <input
+              type="range"
+              matSliderThumb
+              class="range"
+              [(value)]="progressValue"
+            />
+          </mat-slider>
+        </section>
+      </mat-grid-tile>
+  </mat-grid-list>
+  <div class="actions">
+    <button mat-raised-button (click)="cancel()">Cancel</button>
+    <button mat-raised-button (click)="save()">Save</button>
+  </div>
+</div>

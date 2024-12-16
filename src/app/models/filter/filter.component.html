@@ -1,0 +1,33 @@
+<div class="main">
+    <h3>Filter</h3>
+    <mat-grid-list cols="2" rowHeight="2:0.6" [gutterSize]="'10px'">
+            <mat-grid-tile>
+                <mat-form-field>
+                    <mat-label>Your Name</mat-label>
+                    <mat-select>
+                        <mat-option>Hello</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <mat-form-field>
+                    <mat-label>Your Name</mat-label>
+                    <mat-select>
+                        <mat-option>Hello</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <mat-form-field>
+                    <mat-label>Your Name</mat-label>
+                    <mat-select>
+                        <mat-option>Hello</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </mat-grid-tile>
+    </mat-grid-list>
+    <mat-dialog-actions>
+        <button mat-raised-button mat-dialog-close (click)="reset()">Reset</button>
+        <button mat-raised-button mat-dialog-close cdkFocusInitial (click)="filter()">Filter</button>
+    </mat-dialog-actions>
+</div>

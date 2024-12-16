@@ -1,7 +1,18 @@
 <div>
-    <app-navbar></app-navbar>
+    <mat-toolbar class="flex justify-between items-center ptb">
+        <div class="items-center flex">
+            <span class="prl-1">Third Party Test App</span>
+            <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+              <mat-icon class="menu" (click)="drawer.toggle()">menu</mat-icon>
+            </button>
+        </div>
+        <div class="flex items-center">
+            <mat-icon class="mrl-1 menu"  matBadge="10" aria-hidden="false">notifications</mat-icon>
+            <img src="https://avatar.iran.liara.run/public/boy?username=[koko]" alt="profile-Image" class="icon-image shadow">
+        </div>
+    </mat-toolbar>
     <mat-drawer-container class="example-container">
-        <mat-drawer mode="side" opened>
+        <mat-drawer mode="side" opened #drawer>
             <app-sidebar></app-sidebar>
         </mat-drawer>
         <mat-drawer-content>
