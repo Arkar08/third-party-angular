@@ -1,1 +1,48 @@
-<p>signup works!</p>
+<div class="main">
+    <h3>Signup</h3>
+    <form>
+        
+    </form>
+    <mat-stepper linear #stepper>
+        <mat-step [stepControl]="firstFormGroup" [editable]="isEditable">
+          <form [formGroup]="firstFormGroup">
+            <ng-template matStepLabel>Fill out your name and email</ng-template>
+            <div class="name">
+                <mat-form-field>
+                    <mat-label>Name</mat-label>
+                    <input matInput formControlName="firstCtrl" placeholder="Last name, First name" required>
+                  </mat-form-field>
+                  <mat-form-field>
+                      <mat-label>Email</mat-label>
+                      <input matInput formControlName="thirdCtrl" placeholder="email" required>
+                    </mat-form-field>
+            </div>
+            <div>
+              <button mat-button matStepperNext>Next</button>
+            </div>
+          </form>
+        </mat-step>
+        <mat-step [stepControl]="secondFormGroup" [editable]="isEditable">
+          <form [formGroup]="secondFormGroup">
+            <ng-template matStepLabel>Fill out your password</ng-template>
+            <mat-form-field>
+              <mat-label>Password</mat-label>
+              <input matInput formControlName="secondCtrl" placeholder="Password"
+                     required>
+            </mat-form-field>
+            <div>
+              <button mat-button matStepperPrevious>Back</button>
+              <button mat-button matStepperNext>Next</button>
+            </div>
+          </form>
+        </mat-step>
+        <mat-step>
+          <ng-template matStepLabel>Done</ng-template>
+          <p>You are now Signup.Thank You</p>
+          <div>
+            <button mat-button matStepperPrevious>Back</button>
+            <button mat-button (click)="signup()">Signup</button>
+          </div>
+        </mat-step>
+      </mat-stepper>
+</div>

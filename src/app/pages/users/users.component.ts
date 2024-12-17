@@ -21,7 +21,7 @@ export class UsersComponent implements OnInit {
   }
   filter(){
     this.dialog.open(FilterComponent,{
-      width:'1200px',
+      width:'900px',
       height: '350px'
     })
   }

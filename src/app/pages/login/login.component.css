@@ -56,3 +56,15 @@ button{
     color: white !important;
     letter-spacing: 1px;
 }
+.footer{
+    display: flex;
+    align-items: center;
+}
+span{
+    color: blue !important;
+    cursor: pointer;
+    margin-left: 10px;
+}
+span:hover{
+    text-decoration: underline;
+}

@@ -10,6 +10,9 @@
             <input matInput [type]="hide ? 'password' : 'text'" />
             <mat-icon (click)="clickEvent()" class="icon">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
         </mat-form-field>
+        <div class="footer">
+            <p>Are You Have An Account?</p><span routerLink="/signup">Signup</span>
+        </div>
         <div class="action">
             <button mat-raised-button (click)="login()">Login</button>
         </div>

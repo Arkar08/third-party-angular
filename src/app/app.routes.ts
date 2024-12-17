@@ -6,6 +6,7 @@ import { ProfileCardComponent } from './pages/profile-card/profile-card.componen
 import { CreateComponent } from './pages/users/create/create.component';
 import { LogoutComponent } from './pages/logout/logout.component';
 import { LoginComponent } from './pages/login/login.component';
+import { SignupComponent } from './pages/signup/signup.component';
 
 export const routes: Routes = [
     {
@@ -16,6 +17,10 @@ export const routes: Routes = [
     {
         path:'login',
         component:LoginComponent
+    },
+    {
+        path:'signup',
+        component:SignupComponent
     },
     {
         path:'',

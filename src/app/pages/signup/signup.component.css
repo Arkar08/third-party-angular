@@ -1,0 +1,43 @@
+.main{
+    position: relative;
+}
+h3{
+    font-size: 28px !important;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #009687e2 !important;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%,20%);
+}
+
+.mat-stepper-horizontal {
+    margin-top: 8px;
+  }
+  .name{
+    display: flex;
+    flex-direction: column;
+  }
+  .mat-mdc-form-field {
+    margin-top: 16px;
+    width: 100%;
+  }
+  mat-stepper{
+    max-width: 600px;
+    width: 100%;
+    position: absolute;
+    border-radius: 10px;
+    /* border-top: 5px solid #08fce3e2; */
+    border-top: 5px solid #009687e2;
+    box-shadow: 1px 1px 3px gray;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%,20%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+  }

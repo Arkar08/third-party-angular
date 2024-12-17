@@ -4,10 +4,11 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { Router } from '@angular/router';
 import { MatIconModule } from '@angular/material/icon';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-login',
-  imports: [MatFormFieldModule,MatInputModule,MatButtonModule,MatIconModule],
+  imports: [MatFormFieldModule,MatInputModule,MatButtonModule,MatIconModule,RouterLink],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
 })
