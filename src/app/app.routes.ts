@@ -4,6 +4,7 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { UsersComponent } from './pages/users/users.component';
 import { ProfileCardComponent } from './pages/profile-card/profile-card.component';
 import { CreateComponent } from './pages/users/create/create.component';
+import { LogoutComponent } from './pages/logout/logout.component';
 
 export const routes: Routes = [
     {
@@ -30,6 +31,10 @@ export const routes: Routes = [
             {
                 path:'profile',
                 component:ProfileCardComponent
+            },
+            {
+                path:'logout',
+                component:LogoutComponent
             }
         ]
     }

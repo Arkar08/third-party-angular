@@ -5,23 +5,29 @@
                 <mat-form-field>
                     <mat-label>Your Name</mat-label>
                     <mat-select>
-                        <mat-option>Hello</mat-option>
+                       @for (user of users; track user) {
+                        <mat-option>{{user}}</mat-option>
+                       }
                     </mat-select>
                 </mat-form-field>
             </mat-grid-tile>
             <mat-grid-tile>
                 <mat-form-field>
-                    <mat-label>Your Name</mat-label>
+                    <mat-label>Favorite Fruit</mat-label>
                     <mat-select>
-                        <mat-option>Hello</mat-option>
+                        @for (fruit of fruits; track fruit) {
+                            <mat-option>{{fruit}}</mat-option>
+                        }
                     </mat-select>
                 </mat-form-field>
             </mat-grid-tile>
             <mat-grid-tile>
                 <mat-form-field>
-                    <mat-label>Your Name</mat-label>
+                    <mat-label>Percent</mat-label>
                     <mat-select>
-                        <mat-option>Hello</mat-option>
+                        @for (percent of percents; track percent) {
+                            <mat-option>{{percent}}%</mat-option>
+                        }
                     </mat-select>
                 </mat-form-field>
             </mat-grid-tile>

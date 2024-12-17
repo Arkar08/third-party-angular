@@ -7,6 +7,49 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { ProgressBarComponent } from '../../components/progress-bar/progress-bar.component';
 
+
+const FRUITS: string[] = [
+  'blueberry',
+  'lychee',
+  'kiwi',
+  'mango',
+  'peach',
+  'lime',
+  'pomegranate',
+  'pineapple',
+];
+const NAMES: string[] = [
+  'Maia',
+  'Asher',
+  'Olivia',
+  'Atticus',
+  'Amelia',
+  'Jack',
+  'Charlotte',
+  'Theodore',
+  'Isla',
+  'Oliver',
+  'Isabella',
+  'Jasper',
+  'Cora',
+  'Levi',
+  'Violet',
+  'Arthur',
+  'Mia',
+  'Thomas',
+  'Elizabeth',
+];
+
+const PERCENT: string[]=[
+  '0',
+  '5',
+  '10',
+  '15',
+  '20',
+  '25',
+  '30'
+]
+
 @Component({
   selector: 'app-filter',
   imports: [
@@ -21,8 +64,15 @@ import { ProgressBarComponent } from '../../components/progress-bar/progress-bar
 })
 export class FilterComponent implements OnInit {
   durationInSeconds = 3;
+  fruits:any;
+  users:any;
+  percents:any;
   constructor(private snackBar: MatSnackBar, private dialog:MatDialogRef<FilterComponent>) {}
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.fruits = FRUITS;
+    this.users = NAMES;
+    this.percents = PERCENT;
+  }
   filter() {
     this.snackBar.openFromComponent(ProgressBarComponent, {
       duration: this.durationInSeconds * 1000,
