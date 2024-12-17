@@ -30,6 +30,7 @@ export class LineChartComponent implements OnInit {
             }]
           },
           options: {
+            maintainAspectRatio:false,
             aspectRatio:2.5,
             animations: {
               tension: {
