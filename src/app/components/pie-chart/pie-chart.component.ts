@@ -16,9 +16,9 @@ export class PieChartComponent implements OnInit {
   }
   createChart(){
     this.chart = new Chart("MyPie", {
-      type: 'pie', //this denotes tha type of chart
+      type: 'pie',
 
-      data: {// values on X-Axis
+      data: {
         labels: ['Red', 'Pink','Green','Yellow','Orange','Blue', ],
            datasets: [{
     label: 'My First Dataset',

@@ -17,9 +17,9 @@ export class DonughnutChartComponent implements OnInit {
   }
   createChart(){
     this.chart = new Chart("MyDonughnut", {
-      type: 'doughnut', //this denotes tha type of chart
+      type: 'doughnut', 
 
-      data: {// values on X-Axis
+      data: {
         labels: ['Red', 'Pink','Green','Yellow','Orange','Blue', ],
            datasets: [{
     label: 'My First Dataset',

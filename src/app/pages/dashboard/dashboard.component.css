@@ -3,3 +3,22 @@ h3{
     font-weight: 500;
     color: #009687e2 !important;
 }
+mat-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px !important;
+}
+.chart{
+    margin-left: 500px;
+}
+h4{
+    font-size: 18px !important;
+    font-weight: 400;
+}
+.main{
+    margin-bottom: 30px;
+}
+.footer{
+    margin-top: 20px;
+}

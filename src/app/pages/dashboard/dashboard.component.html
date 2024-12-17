@@ -1,7 +1,29 @@
-<h3>Welcome Back, My Friend</h3>
-<div>
-    <app-bar-chart></app-bar-chart>
-    <app-donughnut-chart></app-donughnut-chart>
-    <app-pie-chart></app-pie-chart>
-    <app-line-chart></app-line-chart>
+
+
+<div class="main">
+    <h3>Welcome Back, My Friend</h3>
+    <mat-grid-list cols="2" rowHeight="2:1.2" [gutterSize]="'10px'">
+        <mat-grid-tile>
+            <mat-card>
+                <h4>Donughnut Chart Design</h4>
+                <div class="chart">
+                    <app-donughnut-chart></app-donughnut-chart>
+                </div>
+            </mat-card>
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <mat-card>
+                <h4>Pie Chart Design</h4>
+                <div class="chart">
+                    <app-pie-chart></app-pie-chart>
+                </div>
+            </mat-card>
+        </mat-grid-tile>
+      </mat-grid-list>
+      <div class="footer">
+        <app-bar-chart></app-bar-chart>
+      </div>
+      <div class="footer">
+        <app-line-chart></app-line-chart>
+      </div>
 </div>
