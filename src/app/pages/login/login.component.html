@@ -1,0 +1,17 @@
+<div class="main">
+    <form>
+        <h3>Login</h3>
+        <mat-form-field>
+            <mat-label>UserName</mat-label>
+            <input type="text" placeholder="Name" matInput>
+        </mat-form-field>
+        <mat-form-field class="field">
+            <mat-label>Password</mat-label>
+            <input matInput [type]="hide ? 'password' : 'text'" />
+            <mat-icon (click)="clickEvent()" class="icon">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </mat-form-field>
+        <div class="action">
+            <button mat-raised-button (click)="login()">Login</button>
+        </div>
+    </form>
+</div>

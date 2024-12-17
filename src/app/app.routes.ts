@@ -5,12 +5,17 @@ import { UsersComponent } from './pages/users/users.component';
 import { ProfileCardComponent } from './pages/profile-card/profile-card.component';
 import { CreateComponent } from './pages/users/create/create.component';
 import { LogoutComponent } from './pages/logout/logout.component';
+import { LoginComponent } from './pages/login/login.component';
 
 export const routes: Routes = [
     {
         path:'',
         pathMatch:'full',
-        redirectTo:'/dashboard'
+        redirectTo:'login'
+    },
+    {
+        path:'login',
+        component:LoginComponent
     },
     {
         path:'',
