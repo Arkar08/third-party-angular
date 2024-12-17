@@ -3,3 +3,6 @@ h3{
     font-weight: 500;
     color: #009687e2 !important;
 }
+mat-grid-list{
+    margin-bottom: 20px !important;
+}
