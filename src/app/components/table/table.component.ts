@@ -11,6 +11,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { DeleteFruitComponent } from '../../pages/users/delete-fruit/delete-fruit.component';
 
 
+
 export interface UserData {
   id: string;
   name: string;
@@ -69,13 +70,14 @@ export class TableComponent implements AfterViewInit,OnInit {
   @ViewChild(MatSort)
   sort!: MatSort;
   @Input() filterValue = '';
+  users:any;
 
   constructor(private router:Router,private dialog:MatDialog) {
     // Create 100 users
-    const users = Array.from({length: 100}, (_, k) => createNewUser(k + 1));
+    this.users = Array.from({length: 100}, (_, k) => createNewUser(k + 1));
 
     // Assign the data to the data source for the table to render
-    this.dataSource = new MatTableDataSource(users);
+    this.dataSource = new MatTableDataSource(this.users);
   }
   isAllSelected() {
     const numSelected = this.selection.selected.length;
@@ -83,7 +85,9 @@ export class TableComponent implements AfterViewInit,OnInit {
     return numSelected === numRows;
   }
   ngOnInit(): void {
-    this.dataSource.filter = this.filterValue?.trim().toLowerCase()
+      this.filter()
+  
+    
   }
   toggleAllRows() {
     if (this.isAllSelected()) {
@@ -108,10 +112,22 @@ export class TableComponent implements AfterViewInit,OnInit {
   //   const filterValue = (event.target as HTMLInputElement).value;
   //   this.dataSource.filter = filterValue.trim().toLowerCase();
 
-  //   if (this.dataSource.paginator) {
-  //     this.dataSource.paginator.firstPage();
-  //   }
+  //  
   // }
+  filter(){
+    if(this.filterValue === ''){
+      this.dataSource = new MatTableDataSource(this.users);
+    }else{
+      setTimeout(()=>{
+        const data = this.filterValue?.trim().toLowerCase()
+        this.dataSource.filter = data;
+        if (this.dataSource.paginator) {
+              this.dataSource.paginator.firstPage();
+            }
+      },3000)
+    }
+    
+  }
   edit(){
     this.router.navigate(['/users/fruit/edit'])
   }
@@ -140,3 +156,5 @@ function createNewUser(id: number): UserData {
 
 
 }
+
+
