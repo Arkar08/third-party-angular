@@ -4,7 +4,7 @@ table{
 }
 .main{
     position: relative;
-    height: calc(100vh - 233px);
+    height: calc(100vh - 220px);
 }
 mat-paginator{
     position: absolute !important;
