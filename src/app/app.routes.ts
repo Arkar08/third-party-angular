@@ -8,6 +8,7 @@ import { LogoutComponent } from './pages/logout/logout.component';
 import { LoginComponent } from './pages/login/login.component';
 import { SignupComponent } from './pages/signup/signup.component';
 import { EditFruitComponent } from './pages/users/edit-fruit/edit-fruit.component';
+import { ListsComponent } from './pages/list/lists/lists.component';
 
 export const routes: Routes = [
     {
@@ -32,15 +33,19 @@ export const routes: Routes = [
                 component:DashboardComponent
             },
             {
-                path:'users',
+                path:'user',
+                component:ListsComponent
+            },
+            {
+                path:'users/fruit',
                 component:UsersComponent
             },
             {
-                path:'users/create',
+                path:'users/fruit/create',
                 component:CreateComponent
             },
             {
-                path:'users/edit',
+                path:'users/fruit/edit',
                 component:EditFruitComponent
             },
             {

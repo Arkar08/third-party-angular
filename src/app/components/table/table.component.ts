@@ -111,7 +111,7 @@ export class TableComponent implements AfterViewInit {
     }
   }
   edit(){
-    this.router.navigate(['/users/edit'])
+    this.router.navigate(['/users/fruit/edit'])
   }
   delete(){
     this.dialog.open(DeleteFruitComponent,{

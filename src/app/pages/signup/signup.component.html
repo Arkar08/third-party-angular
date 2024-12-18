@@ -27,6 +27,13 @@
               <input matInput formControlName="secondCtrl" placeholder="Password"
                      required>
             </mat-form-field>
+            <mat-form-field>
+              <mat-label>Date Of Birth</mat-label>
+              <input matInput [matDatepicker]="picker">
+              <mat-hint>MM/DD/YYYY</mat-hint>
+              <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+              <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
             <div>
               <button mat-button matStepperPrevious>Back</button>
               <button mat-button matStepperNext>Next</button>
@@ -35,6 +42,10 @@
         </mat-step>
         <mat-step>
           <ng-template matStepLabel>Done</ng-template>
+          <mat-form-field>
+            <mat-label>Contact No</mat-label>
+            <input matInput  placeholder="09*********"required type="number">
+          </mat-form-field>
           <p>You are now Signup.Thank You</p>
           <div>
             <button mat-button matStepperPrevious>Back</button>

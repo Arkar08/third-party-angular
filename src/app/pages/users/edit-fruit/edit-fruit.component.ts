@@ -48,7 +48,7 @@ progressValue = 0;
         data:"Cancelling"
       })
     setTimeout(()=>{
-      this.router.navigate(['/users'])
+      this.router.navigate(['/users/fruit'])
     },3000)
   }
 
@@ -60,7 +60,7 @@ progressValue = 0;
       data:'Updating'
     })
     setTimeout(()=>{
-      this.router.navigate(['/users'])
+      this.router.navigate(['/users/fruit'])
     },3000)
   }
 }

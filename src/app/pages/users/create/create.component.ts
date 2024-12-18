@@ -43,7 +43,7 @@ export class CreateComponent implements OnInit {
         data:"Cancelling"
       })
     setTimeout(()=>{
-      this.router.navigate(['/users'])
+      this.router.navigate(['/users/fruit'])
     },3000)
   }
 
@@ -55,7 +55,7 @@ export class CreateComponent implements OnInit {
       data:'Saving'
     })
     setTimeout(()=>{
-      this.router.navigate(['/users'])
+      this.router.navigate(['/users/fruit'])
     },3000)
   }
 }
