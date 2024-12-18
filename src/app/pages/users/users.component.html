@@ -4,7 +4,7 @@
             <div class="flex items-center row flex-2 flex-end">
                 <mat-form-field>
                     <mat-label>Search</mat-label>
-                    <input type="text" matInput placeholder="search">
+                    <input type="text" matInput placeholder="search" (keyup)="search($event)">
                 </mat-form-field>
                 <div class="ml-2">
                     <mat-icon class="filter" (click)="filter()">filter_alt</mat-icon>
@@ -12,6 +12,6 @@
                 </div>
             </div>
         </div>
-        <app-table></app-table>
+        <app-table [filterValue] ='filterValue' ></app-table>
     </div>
 

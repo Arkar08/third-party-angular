@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, Input, OnInit, ViewChild } from '@angular/core';
 import {MatPaginator, MatPaginatorModule} from '@angular/material/paginator';
 import {MatTableDataSource, MatTableModule} from '@angular/material/table';
 import {MatSort, MatSortModule} from '@angular/material/sort';
@@ -59,7 +59,7 @@ const NAMES: string[] = [
   templateUrl: './table.component.html',
   styleUrl: './table.component.css'
 })
-export class TableComponent implements AfterViewInit {
+export class TableComponent implements AfterViewInit,OnInit {
   displayedColumns: string[] = ['select','id', 'name', 'progress', 'fruit','Action'];
   dataSource: MatTableDataSource<UserData>;
   selection = new SelectionModel<UserData>(true, []);
@@ -68,6 +68,7 @@ export class TableComponent implements AfterViewInit {
   paginator!: MatPaginator;
   @ViewChild(MatSort)
   sort!: MatSort;
+  @Input() filterValue = '';
 
   constructor(private router:Router,private dialog:MatDialog) {
     // Create 100 users
@@ -81,7 +82,9 @@ export class TableComponent implements AfterViewInit {
     const numRows = this.dataSource.data.length;
     return numSelected === numRows;
   }
-
+  ngOnInit(): void {
+    this.dataSource.filter = this.filterValue?.trim().toLowerCase()
+  }
   toggleAllRows() {
     if (this.isAllSelected()) {
       this.selection.clear();
@@ -101,15 +104,14 @@ export class TableComponent implements AfterViewInit {
     this.dataSource.paginator = this.paginator;
     this.dataSource.sort = this.sort;
   }
+  // applyFilter(event: Event) {
+  //   const filterValue = (event.target as HTMLInputElement).value;
+  //   this.dataSource.filter = filterValue.trim().toLowerCase();
 
-  applyFilter(event: Event) {
-    const filterValue = (event.target as HTMLInputElement).value;
-    this.dataSource.filter = filterValue.trim().toLowerCase();
-
-    if (this.dataSource.paginator) {
-      this.dataSource.paginator.firstPage();
-    }
-  }
+  //   if (this.dataSource.paginator) {
+  //     this.dataSource.paginator.firstPage();
+  //   }
+  // }
   edit(){
     this.router.navigate(['/users/fruit/edit'])
   }

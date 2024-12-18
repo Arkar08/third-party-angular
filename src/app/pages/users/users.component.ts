@@ -15,6 +15,7 @@ import { Router } from '@angular/router';
   styleUrl: './users.component.css'
 })
 export class UsersComponent implements OnInit {
+  filterValue :any;
   constructor(private dialog:MatDialog,private router:Router){}
   ngOnInit(): void {
       
@@ -26,7 +27,14 @@ export class UsersComponent implements OnInit {
     })
   }
 
+  search(event:any){
+    this.filterValue = event.target.value;
+    return this.filterValue;
+  }
+
+
   create(){
     this.router.navigate(['users/fruit/create'])
   }
+
 }
