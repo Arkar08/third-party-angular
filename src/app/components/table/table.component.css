@@ -2,3 +2,12 @@
     overflow: auto;
     height: calc(100vh - 220px);
 }
+.edit{
+    color: blue;
+    cursor: pointer;
+    margin-right: 5px;
+}
+.delete{
+    color: red;
+    cursor: pointer;
+}

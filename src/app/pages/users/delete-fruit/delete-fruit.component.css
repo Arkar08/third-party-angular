@@ -1,27 +1,15 @@
-.main{
-    position: relative;
-}
 form{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,50%);
-    width: 500px;
-    box-shadow: 3px 3px 5px #009687e2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 10px;
-    padding-bottom: 50px;
-    border-radius: 10px;
+    flex-direction: column;
 }
 h3{
     font-size: 28px !important;
     font-weight: 400;
     text-align: center;
     margin-bottom: 50px !important;
-}
-.action{
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 button{
     width: 100px !important;

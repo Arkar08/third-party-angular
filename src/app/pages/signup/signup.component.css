@@ -7,10 +7,7 @@ h3{
     text-transform: uppercase;
     letter-spacing: 1px;
     color: #009687e2 !important;
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    transform: translate(-50%,20%);
+    text-align: center;
 }
 
 .mat-stepper-horizontal {
@@ -32,9 +29,9 @@ h3{
     /* border-top: 5px solid #08fce3e2; */
     border-top: 5px solid #009687e2;
     box-shadow: 1px 1px 3px gray;
-    top: 10%;
+    top: 30%;
     left: 50%;
-    transform: translate(-50%,20%);
+    transform: translate(-50%,30%);
     display: flex;
     justify-content: center;
     align-items: center;

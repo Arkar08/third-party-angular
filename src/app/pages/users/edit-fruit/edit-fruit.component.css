@@ -1,0 +1,39 @@
+h3{
+    font-size: 24px !important;
+    font-weight: 500;
+    color: #009687e2 !important;
+}
+mat-form-field{
+    width: 100%;
+}
+.example-section {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 60px;
+}
+.range{
+    width: 100%;
+}
+.mat-mdc-slider{
+    min-width: 300px !important;
+}
+button{
+    width: 100px;
+}
+button:nth-child(1){
+    background-color: red;
+    color: white;
+    margin-right: 10px !important;
+}
+button:nth-child(2){
+    background-color: green;
+    color: white;
+}
+.actions{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 3rem;
+}

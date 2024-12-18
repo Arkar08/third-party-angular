@@ -4,6 +4,11 @@ import {MatTableDataSource, MatTableModule} from '@angular/material/table';
 import {MatSort, MatSortModule} from '@angular/material/sort';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {SelectionModel} from '@angular/cdk/collections';
+import { MatIconModule } from '@angular/material/icon';
+import { MatTooltipModule} from '@angular/material/tooltip';
+import { Router } from '@angular/router';
+import { MatDialog } from '@angular/material/dialog';
+import { DeleteFruitComponent } from '../../pages/users/delete-fruit/delete-fruit.component';
 
 
 export interface UserData {
@@ -50,12 +55,12 @@ const NAMES: string[] = [
 
 @Component({
   selector: 'app-table',
-  imports: [MatTableModule, MatSortModule, MatPaginatorModule,MatCheckboxModule],
+  imports: [MatTableModule, MatSortModule, MatPaginatorModule,MatCheckboxModule,MatIconModule,MatTooltipModule],
   templateUrl: './table.component.html',
   styleUrl: './table.component.css'
 })
 export class TableComponent implements AfterViewInit {
-  displayedColumns: string[] = ['select','id', 'name', 'progress', 'fruit'];
+  displayedColumns: string[] = ['select','id', 'name', 'progress', 'fruit','Action'];
   dataSource: MatTableDataSource<UserData>;
   selection = new SelectionModel<UserData>(true, []);
 
@@ -64,7 +69,7 @@ export class TableComponent implements AfterViewInit {
   @ViewChild(MatSort)
   sort!: MatSort;
 
-  constructor() {
+  constructor(private router:Router,private dialog:MatDialog) {
     // Create 100 users
     const users = Array.from({length: 100}, (_, k) => createNewUser(k + 1));
 
@@ -105,6 +110,15 @@ export class TableComponent implements AfterViewInit {
       this.dataSource.paginator.firstPage();
     }
   }
+  edit(){
+    this.router.navigate(['/users/edit'])
+  }
+  delete(){
+    this.dialog.open(DeleteFruitComponent,{
+      width:'900px',
+      height:'200px'
+    })
+  }
 }
 
 /** Builds and returns a new User. */
@@ -121,5 +135,6 @@ function createNewUser(id: number): UserData {
     progress: Math.round(Math.random() * 100).toString(),
     fruit: FRUITS[Math.round(Math.random() * (FRUITS.length - 1))],
   };
+
 
 }

@@ -7,6 +7,7 @@ import { CreateComponent } from './pages/users/create/create.component';
 import { LogoutComponent } from './pages/logout/logout.component';
 import { LoginComponent } from './pages/login/login.component';
 import { SignupComponent } from './pages/signup/signup.component';
+import { EditFruitComponent } from './pages/users/edit-fruit/edit-fruit.component';
 
 export const routes: Routes = [
     {
@@ -37,6 +38,10 @@ export const routes: Routes = [
             {
                 path:'users/create',
                 component:CreateComponent
+            },
+            {
+                path:'users/edit',
+                component:EditFruitComponent
             },
             {
                 path:'profile',
