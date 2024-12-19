@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 
@@ -9,6 +9,36 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
   templateUrl: './sidebar.component.html',
   styleUrl: './sidebar.component.css'
 })
-export class SidebarComponent {
-
+export class SidebarComponent implements OnInit {
+  menuLists:any[]=[]
+  constructor(){}
+  ngOnInit(): void {
+      this.menuLists = [
+        {
+          path:'/dashboard',
+          name:'Dashboard',
+          iconName:'dashboard'
+        },
+        {
+          path:'/user',
+          name:'Users',
+          iconName:'person'
+        },
+        {
+          path:'/users/fruit',
+          name:"User's Fruit",
+          iconName:'food_bank'
+        },
+        {
+          path:'/profile',
+          name:'Profile Card Design',
+          iconName:'account_circle'
+        },
+        {
+          path:'/logout',
+          name:'Logout',
+          iconName:'logout'
+        }
+      ]
+  }
 }

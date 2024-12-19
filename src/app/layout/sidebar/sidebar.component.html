@@ -1,4 +1,4 @@
-<ul>
+<!-- <ul>
     <li>
         <a routerLink="/dashboard" routerLinkActive="active">
             <mat-icon class="prl-1">dashboard</mat-icon>
@@ -29,4 +29,10 @@
             <span>Logout</span>
         </a>
     </li>
-</ul>
+</ul> -->
+@for (menu of menuLists; track menu) {
+    <a [routerLink]="menu.path" routerLinkActive="active">
+        <mat-icon class="prl-1">{{menu.iconName}}</mat-icon>
+        <span>{{menu.name}}</span>
+    </a>
+}
