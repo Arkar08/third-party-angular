@@ -29,12 +29,10 @@ export class UsersComponent implements OnInit {
 
   search(event:any){
     this.filterValue = event.target.value;
-    return this.filterValue;
   }
 
 
   create(){
     this.router.navigate(['users/fruit/create'])
   }
-
 }

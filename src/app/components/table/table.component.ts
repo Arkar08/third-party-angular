@@ -86,8 +86,6 @@ export class TableComponent implements AfterViewInit,OnInit {
   }
   ngOnInit(): void {
       this.filter()
-  
-    
   }
   toggleAllRows() {
     if (this.isAllSelected()) {
@@ -118,16 +116,15 @@ export class TableComponent implements AfterViewInit,OnInit {
     if(this.filterValue === ''){
       this.dataSource = new MatTableDataSource(this.users);
     }else{
-      setTimeout(()=>{
         const data = this.filterValue?.trim().toLowerCase()
         this.dataSource.filter = data;
         if (this.dataSource.paginator) {
               this.dataSource.paginator.firstPage();
             }
-      },3000)
     }
     
   }
+
   edit(){
     this.router.navigate(['/users/fruit/edit'])
   }
